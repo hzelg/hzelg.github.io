@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebMD Symptom Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F8F9FA;
+        }
+        .navbar {
+            background-color: #03155A;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .progress-tabs {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+        }
+        .tab.active {
+            border-bottom: 3px solid #0077b6;
+            color: #0077b6;
+        }
+        .heading {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #03155A;
+            margin-bottom: 10px;
+        }
+        .subheading {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .info-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .input-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 60px;
+            text-align: center;
+        }
+        .gender-box {
+            display: flex;
+            gap: 10px;
+        }
+        .gender-box button {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #f0f0f0;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 80px;
+        }
+        .gender-box button.active {
+            background: #0077b6;
+            color: white;
+        }
+        .continue-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #ccc;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            text-align: center;
+            cursor: not-allowed;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div>WebMD</div>
+        <div>
+            <a href="#">Conditions</a>
+            <a href="#">Drugs & Supplements</a>
+            <a href="#">Well-Being</a>
+            <a href="#">Symptom Checker</a>
+            <a href="#">Find a Doctor</a>
+            <a href="#">More</a>
+            <a href="#">Subscribe</a>
+            <a href="#">Log In</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="progress-tabs">
+            <div class="tab active">INFO</div>
+            <div class="tab">SYMPTOMS</div>
+            <div class="tab">CONDITIONS</div>
+            <div class="tab">DETAILS</div>
+            <div class="tab">TREATMENT</div>
+        </div>
+
+        <div class="heading">WebMD <span style="font-weight: 400;">Symptom Checker</span> <span style="color: #0077b6;">WITH BODY MAP</span></div>
+        <div class="subheading">Identify possible conditions and treatment related to your symptoms.</div>
+        <div class="subheading" style="font-size: 12px; color: #888;">
+            This tool does not provide medical advice. <span style="color: #0077b6; cursor: pointer;">See additional information</span>
+        </div>
+
+        <div class="info-section">
+            <div>
+                <h3 style="text-align: center;">Age</h3>
+                <input type="number" class="input-box" id="ageInput">
+            </div>
+            <div>
+                <h3 style="text-align: center;">Sex</h3>
+                <div class="gender-box">
+                    <button id="maleBtn">Male</button>
+                    <button id="femaleBtn">Female</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="continue-btn" id="continueBtn">Continue</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ageInput = document.getElementById("ageInput");
+            const maleBtn = document.getElementById("maleBtn");
+            const femaleBtn = document.getElementById("femaleBtn");
+            const continueBtn = document.getElementById("continueBtn");
+
+            let selectedGender = null;
+
+            maleBtn.addEventListener("click", function() {
+                selectedGender = "male";
+                maleBtn.classList.add("active");
+                femaleBtn.classList.remove("active");
+                validateForm();
+            });
+
+            femaleBtn.addEventListener("click", function() {
+                selectedGender = "female";
+                femaleBtn.classList.add("active");
+                maleBtn.classList.remove("active");
+                validateForm();
+            });
+
+            ageInput.addEventListener("input", validateForm);
+
+            function validateForm() {
+                if (ageInput.value && selectedGender) {
+                    continueBtn.style.backgroundColor = "#0077b6";
+                    continueBtn.style.cursor = "pointer";
+                } else {
+                    continueBtn.style.backgroundColor = "#ccc";
+                    continueBtn.style.cursor = "not-allowed";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

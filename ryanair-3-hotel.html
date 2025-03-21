@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryanair Hotel Search</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f8f8f8;">
+
+    <!-- Header -->
+    <div style="background-color: #003580; padding: 15px; display: flex; align-items: center; justify-content: space-between; color: white;">
+        <div style="font-size: 24px; font-weight: bold;">🛫 RYANAIR <span style="font-size: 14px;">Powered by <b style="color: #ffcc00;">Expedia</b></span></div>
+        <div style="display: flex; gap: 20px;">
+            <span>Support</span>
+            <span>Trips</span>
+        </div>
+    </div>
+
+    <!-- Search Filters -->
+    <div style="padding: 20px; background-color: white; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; border-bottom: 1px solid #ddd;">
+        <input type="text" value="Jakarta, Indonesia (CGK-Soekarno...)" style="padding: 10px; width: 300px; border: 1px solid #ccc; border-radius: 5px;">
+        <input type="text" value="Jun 1 - Jun 2" style="padding: 10px; width: 150px; border: 1px solid #ccc; border-radius: 5px;">
+        <input type="text" value="1 traveler, 1 room" style="padding: 10px; width: 200px; border: 1px solid #ccc; border-radius: 5px;">
+        <button style="background-color: #003580; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">🔍</button>
+    </div>
+
+    <div style="display: flex; max-width: 1200px; margin: auto; padding: 20px; gap: 20px;">
+        <!-- Sidebar -->
+        <div style="width: 30%; background-color: white; padding: 15px; border-radius: 5px; box-shadow: 0px 0px 10px #ddd;">
+            <h4>View in a map 🗺️</h4>
+            <div style="height: 150px; background-color: #ddd; text-align: center; line-height: 150px; color: #555;">[Map Placeholder]</div>
+            <button style="margin-top: 10px; width: 100%; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Compare properties ✖️</button>
+            <h4>Search by property name</h4>
+            <input type="text" placeholder="e.g. Marriott" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+            <h4>Filter by</h4>
+            <label><input type="checkbox"> Airport shuttle included</label><br>
+            <label><input type="checkbox"> Central Jakarta</label><br>
+            <label><input type="checkbox"> Breakfast included</label><br>
+            <label><input type="checkbox"> Hotel</label><br>
+            <label><input type="checkbox"> Pool</label>
+        </div>
+
+        <!-- Hotel Listings -->
+        <div style="width: 70%;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span><b>300+ properties</b></span>
+                <select style="padding: 5px; border: 1px solid #ccc;">
+                    <option>Sort by Recommended</option>
+                </select>
+            </div>
+
+            <!-- Hotel Card 1 -->
+            <div style="display: flex; background-color: white; margin-top: 20px; border-radius: 5px; overflow: hidden; box-shadow: 0px 0px 5px #ccc;">
+                <div style="width: 40%; background-color: #ddd; height: 180px; position: relative;">
+                    <span style="position: absolute; top: 5px; left: 5px; background: black; color: white; padding: 3px 6px; font-size: 12px;">Ad</span>
+                </div>
+                <div style="width: 60%; padding: 10px;">
+                    <h3 style="margin: 0;">Fairfield By Marriott Jakarta Soekarno-Hatta Airport</h3>
+                    <p>3.64 km from Soekarno-Hatta Intl. (CGK) 🚌 Airport shuttle included</p>
+                    <p><b>Stay Conveniently Close to the Airport</b><br>Located 10 minutes from Jakarta Soekarno-Hatta International Airport.</p>
+                    <span style="color: green;">✔ Fully refundable</span><br>
+                    <b style="color: #008000;">9.4 Exceptional</b> <span style="color: gray;">180 reviews</span>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="background-color: yellow; padding: 5px 10px; font-weight: bold;">We have 5 left at</span>
+                        <b style="font-size: 20px;">$62</b>
+                        <span style="color: gray; font-size: 14px;">$75 total includes taxes & fees</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Card 2 -->
+            <div style="display: flex; background-color: white; margin-top: 20px; border-radius: 5px; overflow: hidden; box-shadow: 0px 0px 5px #ccc;">
+                <div style="width: 40%; background-color: #ddd; height: 180px; position: relative;">
+                    <span style="position: absolute; top: 5px; left: 5px; background: black; color: white; padding: 3px 6px; font-size: 12px;">Ad</span>
+                </div>
+                <div style="width: 60%; padding: 10px;">
+                    <h3 style="margin: 0;">Sheraton Grand Jakarta Gandaria City Hotel</h3>
+                    <p>19.73 km from Soekarno-Hatta Intl. (CGK) 🏊 Pool</p>
+                    <p><b>A Grand Stay in South Jakarta</b><br>Enjoy Sheraton Grand's comfort & elegance in the heart of Jakarta.</p>
+                    <span style="color: green;">✔ Fully refundable</span><br>
+                    <b style="color: #008000;">9.2 Wonderful</b> <span style="color: gray;">265 reviews</span>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="background-color: yellow; padding: 5px 10px; font-weight: bold;">We have 5 left at</span>
+                        <b style="font-size: 20px;">$151</b>
+                        <span style="color: gray; font-size: 14px;">$183 total includes taxes & fees</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

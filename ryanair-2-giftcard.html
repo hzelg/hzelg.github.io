@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryanair Gift Card</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background-color: #f8f8f8;">
+
+    <!-- Header -->
+    <div style="background-color: #003580; padding: 15px; display: flex; align-items: center; justify-content: space-between; color: white;">
+        <div style="font-size: 24px; font-weight: bold;">🛫 RYANAIR</div>
+        <div style="display: flex; gap: 20px; font-size: 14px;">
+            <span>Fees</span>
+            <span>FAQs</span>
+            <span>My bookings</span>
+            <span>Log in</span>
+            <span style="background-color: #ffcc00; padding: 5px 10px; border-radius: 5px; font-weight: bold;">myRyanair Portal</span>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div style="background-color: #ffcc00; padding: 10px; text-align: center; font-size: 14px;">
+        Keep in mind that the Physical card(s) will be sent to the address you provide below as soon as your order is processed. 
+        To check our estimated delivery times, please <a href="#" style="color: blue; text-decoration: underline;">click here</a>.
+    </div>
+
+    <!-- Page Content -->
+    <div style="max-width: 900px; margin: auto; background-color: white; padding: 20px; border-radius: 5px; margin-top: 20px;">
+        <h3>🎁 Gift Cards</h3>
+        <p>The perfect gift for all occasions</p>
+        
+        <h4>1. Create your Card</h4>
+
+        <!-- Gift Card Type Selection -->
+        <div style="display: flex; justify-content: space-between; border-bottom: 2px solid #ddd; padding-bottom: 10px;">
+            <span style="border-bottom: 3px solid #ffcc00; padding-bottom: 5px;">Digital (by email)</span>
+            <span>Physical (by post)</span>
+        </div>
+
+        <!-- Gift Card Display -->
+        <div style="text-align: center; margin-top: 20px;">
+            <div style="display: inline-block; background-color: #003580; padding: 20px; border-radius: 10px;">
+                <img src="https://www.ryanair.com/ryanair-gift-card-placeholder.png" alt="Gift Card" style="width: 150px;">
+            </div>
+            <div style="margin-top: 10px;">
+                <button style="background-color: white; border: 1px solid #ccc; padding: 5px; border-radius: 5px;">⬅</button>
+                <button style="background-color: white; border: 1px solid #ccc; padding: 5px; border-radius: 5px;">➡</button>
+            </div>
+        </div>
+
+        <!-- Gift Card Value -->
+        <h4>Value</h4>
+        <p>Each Gift Card can be used for multiple bookings until the total amount is fully redeemed.</p>
+        <p style="color: red;">⚠ A €/£2 (or local currency equivalent) administration fee will be applied per Gift Card.</p>
+
+        <select style="width: 100%; padding: 10px; margin-bottom: 10px;">
+            <option>EUR</option>
+        </select>
+
+        <select style="width: 100%; padding: 10px; margin-bottom: 20px;">
+            <option>Select a value</option>
+        </select>
+
+        <!-- Quantity Selection -->
+        <h4>Quantity</h4>
+        <p>A maximum of 10 Gift Cards can be purchased in one transaction.</p>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <button onclick="decreaseQuantity()" style="border: none; background-color: #ddd; padding: 5px 10px; border-radius: 5px;">➖</button>
+            <span id="quantity">1</span>
+            <button onclick="increaseQuantity()" style="border: none; background-color: #ddd; padding: 5px 10px; border-radius: 5px;">➕</button>
+        </div>
+
+        <!-- Message Input -->
+        <h4>Message (optional)</h4>
+        <p>Write the message you would like to appear on the Gift Card.</p>
+        <textarea style="width: 100%; height: 50px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" maxlength="100"></textarea>
+        <p style="text-align: right; font-size: 12px;">Characters remaining: <span id="charCount">100</span></p>
+
+        <!-- Name Input -->
+        <h4>From</h4>
+        <p>Write your name as you would like it to appear on the Gift Card.</p>
+        <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+        <!-- Preview and Continue Buttons -->
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button style="background-color: white; border: 1px solid #ccc; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Preview</button>
+            <button style="background-color: #ffcc00; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        // Quantity Control
+        let quantity = 1;
+        function increaseQuantity() {
+            if (quantity < 10) {
+                quantity++;
+                document.getElementById('quantity').innerText = quantity;
+            }
+        }
+        function decreaseQuantity() {
+            if (quantity > 1) {
+                quantity--;
+                document.getElementById('quantity').innerText = quantity;
+            }
+        }
+
+        // Character Counter
+        document.querySelector("textarea").addEventListener("input", function() {
+            document.getElementById("charCount").innerText = 100 - this.value.length;
+        });
+    </script>
+
+</body>
+</html>
