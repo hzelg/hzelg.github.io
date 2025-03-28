@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebMD Care - Dr. Odhett Cojocaru, MD</title>
+</head>
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; color:#333;">
+
+  <!-- Top Breadcrumb Navigation -->
+  <div style="width:100%; background-color:#fff; border-bottom:1px solid #ddd;">
+    <div style="max-width:1200px; margin:0 auto; padding:10px 20px;">
+      <a href="#" style="text-decoration:none; color:#000; font-size:14px;">WebMD Care</a>
+      <span style="color:#000; margin:0 5px;">&gt;</span>
+      <a href="#" style="text-decoration:none; color:#000; font-size:14px;">Providers</a>
+      <span style="color:#000; margin:0 5px;">&gt;</span>
+      <a href="#" style="text-decoration:none; color:#000; font-size:14px;">Specialties</a>
+      <span style="color:#000; margin:0 5px;">&gt;</span>
+      <a href="#" style="text-decoration:none; color:#000; font-size:14px;">Primary Care</a>
+      <span style="color:#000; margin:0 5px;">&gt;</span>
+      <a href="#" style="text-decoration:none; color:#000; font-size:14px;">NV</a>
+      <span style="color:#000; margin:0 5px;">&gt;</span>
+      <a href="#" style="text-decoration:none; color:#000; font-size:14px;">LAS VEGAS</a>
+      <span style="color:#000; margin:0 5px;">&gt;</span>
+      <span style="font-size:14px; color:#000;">Dr. Odhett Cojocaru, MD</span>
+    </div>
+  </div>
+
+  <!-- Return to profile link -->
+  <div style="max-width:1200px; margin:0 auto; padding:10px 20px;">
+    <a href="#" style="text-decoration:none; color:#0077c8; font-size:14px;">&larr; Return to profile</a>
+  </div>
+
+  <!-- Doctor Info Header -->
+  <div style="max-width:1200px; margin:0 auto; padding:10px 20px;">
+    <h1 style="margin:5px 0; font-size:24px; color:#000;">Dr. Odhett Cojocaru, MD</h1>
+    <p style="margin:0 0 15px 0; font-size:16px; color:#555;">
+      Internal Medicine, Primary Care, Lifestyle Medicine, Obesity Medicine
+    </p>
+  </div>
+
+  <!-- Appointment Request Section -->
+  <div style="max-width:1200px; margin:0 auto; padding:10px 20px;">
+    <h2 style="margin:5px 0; font-size:22px; color:#003366;">Request An Appointment</h2>
+    <p style="margin:0 0 20px 0; font-size:16px; color:#555;">How can we help you?</p>
+
+    <!-- Form Container -->
+    <form style="border:1px solid #ddd; border-radius:5px; padding:20px; max-width:600px;">
+      <!-- Preferred Time of Day -->
+      <label for="preferredTime" style="display:block; margin-bottom:5px; font-weight:bold;">
+        Preferred Time of Day*
+      </label>
+      <select id="preferredTime" name="preferredTime" 
+              style="width:100%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;">
+        <option>Anytime of the day</option>
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+      </select>
+
+      <!-- Add a Second Preference -->
+      <a href="#" style="display:inline-block; margin-bottom:15px; color:#0077c8; text-decoration:none; font-size:14px;">
+        + Add a Second Preference
+      </a>
+
+      <!-- First Name & Last Name -->
+      <div style="display:flex; gap:10px; margin-bottom:10px;">
+        <div style="flex:1;">
+          <label for="firstName" style="display:block; margin-bottom:5px; font-weight:bold;">First Name*</label>
+          <input type="text" id="firstName" name="firstName" 
+                 placeholder="First Name" 
+                 style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;">
+        </div>
+        <div style="flex:1;">
+          <label for="lastName" style="display:block; margin-bottom:5px; font-weight:bold;">Last Name*</label>
+          <input type="text" id="lastName" name="lastName" 
+                 placeholder="Last Name" 
+                 style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;">
+        </div>
+      </div>
+
+      <!-- Date of Birth -->
+      <label for="dob" style="display:block; margin-bottom:5px; font-weight:bold;">Date of Birth</label>
+      <input type="date" id="dob" name="dob" 
+             style="width:100%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;">
+
+      <!-- Phone Number -->
+      <label for="phone" style="display:block; margin-bottom:5px; font-weight:bold;">Phone Number*</label>
+      <input type="text" id="phone" name="phone" placeholder="555-555-5555"
+             style="width:100%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;">
+
+      <!-- Email -->
+      <label for="email" style="display:block; margin-bottom:5px; font-weight:bold;">Email*</label>
+      <input type="email" id="email" name="email" placeholder="email@example.com"
+             style="width:100%; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;">
+
+      
+      <!-- Reason for Visit -->
+      <label for="reason" style="display:block; margin-bottom:5px; font-weight:bold;">Reason for Visit*</label>
+      <textarea id="reason" name="reason" 
+                placeholder="Reason for Visit" 
+                style="width:100%; height:60px; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;"></textarea>
+      <p style="font-size:12px; color:#999; margin-top:0; margin-bottom:10px;">
+        Please do not submit any Protected Health Information (PHI)
+      </p>
+
+      <!-- Comments -->
+      <label for="comments" style="display:block; margin-bottom:5px; font-weight:bold;">Comments</label>
+      <textarea id="comments" name="comments" maxlength="400"
+                placeholder="0/400 characters used"
+                style="width:100%; height:60px; padding:8px; margin-bottom:10px; border:1px solid #ccc; border-radius:4px;"></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" 
+              style="background-color:#0077c8; color:#fff; border:none; padding:10px 20px; border-radius:4px; cursor:pointer;">
+        Submit Request
+      </button>
+    </form>
+  </div>
+
+  <!-- Doctors by Location Section -->
+  <div style="max-width:1200px; margin:0 auto; padding:20px;">
+    <h3 style="margin:0 0 10px 0; font-size:18px; color:#000;">DOCTORS BY LOCATION</h3>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <a href="#" style="text-decoration:none; color:#0077c8;">Atlanta</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Austin</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Baltimore</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Birmingham</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Boston</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Buffalo</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Charlotte</a>
+    </div>
+    <a href="#" style="text-decoration:none; color:#0077c8; display:block; margin-top:10px;">View all locations &gt;</a>
+  </div>
+
+  <!-- Additional Links Section -->
+  <div style="max-width:1200px; margin:0 auto; padding:20px;">
+    <!-- Find Doctors -->
+    <h4 style="margin:0 0 10px 0; font-size:16px; color:#000;">Find Doctors</h4>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+      <a href="#" style="text-decoration:none; color:#0077c8;">Internal Medicine</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Cardiovascular Disease</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Family Medicine</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Neurology</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Obstetrics &amp; Gynecology</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Pediatrics</a>
+    </div>
+
+    <!-- Find Providers by Procedure -->
+    <h4 style="margin:0 0 10px 0; font-size:16px; color:#000;">Find Providers by Procedure</h4>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+      <a href="#" style="text-decoration:none; color:#0077c8;">TMS</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Ketamine Infusion Therapy</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Colonoscopy</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">ADHD Testing</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Hernia Repair</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Autism</a>
+    </div>
+
+    <!-- Find Providers by Condition -->
+    <h4 style="margin:0 0 10px 0; font-size:16px; color:#000;">Find Providers by Condition</h4>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+      <a href="#" style="text-decoration:none; color:#0077c8;">HIV Infection</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Chronic Fatigue Syndrome</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Osteoporosis</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Lymphedema</a>
+    </div>
+
+    <!-- More Links -->
+    <h4 style="margin:0 0 10px 0; font-size:16px; color:#000;">List Your Practice</h4>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
+      <a href="#" style="text-decoration:none; color:#0077c8;">New York City Doctors</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Los Angeles Doctors</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Chicago Doctors</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">By Location</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">New York Directory</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Find All Providers</a>
+      <a href="#" style="text-decoration:none; color:#0077c8;">Telemedicine Doctors</a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div style="width:100%; background-color:#f8f8f8; border-top:1px solid #ddd; margin-top:20px;">
+    <div style="max-width:1200px; margin:0 auto; padding:20px;">
+
+      <!-- Social / App Links -->
+      <p style="margin:0 0 10px 0; font-size:14px; color:#000;">Follow WebMD on Social Media</p>
+      <!-- Replace # with actual social links or icons -->
+      <div style="margin-bottom:20px;">
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Facebook</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Twitter</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Instagram</a>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Download WebMD App</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Our Apps</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">For Advertisers</a>
+      </div>
+
+      <!-- Policies and Footer Links -->
+      <div style="margin-bottom:20px;">
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Policies</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Privacy Policy</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Cookie Policy</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Editorial Policy</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Advertising Policy</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Correction Policy</a>
+        <a href="#" style="text-decoration:none; color:#0077c8; margin-right:15px;">Terms of Use</a>
+      </div>
+
+      <!-- Logos (Placeholder) -->
+      <div style="margin-bottom:20px;">
+        <img src="https://via.placeholder.com/100x50.png?text=TRUSTe" 
+             alt="TRUSTe Certified Privacy" 
+             style="margin-right:15px; vertical-align:middle;">
+        <img src="https://via.placeholder.com/60x60.png?text=AdChoices" 
+             alt="AdChoices" 
+             style="vertical-align:middle;">
+      </div>
+
+      <!-- Copyright -->
+      <p style="font-size:12px; color:#666; line-height:1.5; margin:0;">
+        &copy; 2005 - 2025 WebMD LLC, an Internet Brands company. All rights reserved.<br>
+        WebMD does not provide medical advice, diagnosis or treatment.
+        <a href="#" style="text-decoration:none; color:#0077c8;">See additional information</a>.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

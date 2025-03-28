@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Booking - Powered by Ryanair & Expedia</title>
+</head>
+<body style="margin:0; padding:0; font-family:Arial, sans-serif; background-color:#ffffff;">
+
+  <!-- Top Header / Branding -->
+  <div style="width:100%; background-color:#f2f2f2; padding:10px; box-sizing:border-box;">
+    <div style="max-width:1200px; margin:0 auto; position:relative;">
+      <span style="font-weight:bold; font-size:16px; color:#000;">Powered by Ryanair</span>
+      <span style="position:absolute; right:0; top:10px; color:#333;">by Expedia</span>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div style="max-width:1200px; margin:0 auto; padding:20px; box-sizing:border-box;">
+
+    <!-- Page Title -->
+    <h1 style="margin-top:0; font-size:24px; color:#333;">Secure booking – only takes 2 minutes!</h1>
+    <p style="font-size:14px; color:#444; margin-bottom:20px;">
+      Fully refundable before Sat, May 31, 3:00 PM (property local time)<br>
+      Check-in: Sun, Jun 1, 2:00 PM<br>
+      Check-out: Wed, Jun 4, noon (3-night stay)<br>
+      Pay nothing until May 31, 3:00 PM!
+    </p>
+
+    <!-- 2-Column Layout -->
+    <div style="display:flex; flex-wrap:wrap;">
+
+      <!-- Left Column: Guest & Payment Details -->
+      <div style="flex:1 1 60%; max-width:60%; padding-right:20px; box-sizing:border-box;">
+
+        <!-- Who's Checking In? -->
+        <h2 style="font-size:18px; margin:0 0 10px; color:#333;">Who’s checking in?</h2>
+        <div style="border:1px solid #ccc; padding:15px; margin-bottom:20px;">
+          <p style="margin:0; font-weight:bold; color:#333;">Room 1: 1 Adult, 1 Double Bed, Non-smoking</p>
+          <p style="margin:5px 0 10px; color:#666;">
+            Required for check-in: The name on the photo ID must match the name on the reservation.
+          </p>
+          <div style="margin-bottom:10px;">
+            <label for="email" style="display:block; margin-bottom:5px; color:#333;">Email for confirmation</label>
+            <input type="email" id="email" name="email" placeholder="e.g. [email protected]" 
+                   style="width:100%; padding:8px; box-sizing:border-box; border:1px solid #ccc;">
+          </div>
+          <div>
+            <label for="phone" style="display:block; margin-bottom:5px; color:#333;">Mobile phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="USA +1" 
+                   style="width:100%; padding:8px; box-sizing:border-box; border:1px solid #ccc;">
+          </div>
+          <div >
+            <label for="ryanair-membership" style="display: flex; align-items: center; gap: 10px;">
+                <span>Subscribe to VIP membership</span>
+                <label class="switch">
+                    <input type="checkbox" id="ryanair-membership" name="membership" checked>
+                    <span class="slider round"></span>
+                </label>
+            </label>
+        </div>
+        </div>
+
+        <!-- Payment Method -->
+        <h2 style="font-size:18px; margin:0 0 10px; color:#333;">Payment method</h2>
+        <p style="margin:0 0 10px; color:#666;">$0.00 now. Your card will be charged upon hotel reservation.</p>
+        <div style="margin-bottom:10px;">
+          <label style="margin-right:10px; color:#333;">
+            <input type="radio" name="card_type" checked> VISA
+          </label>
+          <label style="margin-right:10px; color:#333;">
+            <input type="radio" name="card_type"> MasterCard
+          </label>
+        </div>
+        <div style="border:1px solid #ccc; padding:15px; margin-bottom:20px;">
+          <div style="margin-bottom:10px;">
+            <label for="cardNumber" style="display:block; margin-bottom:5px; color:#333;">Debit/Credit card number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000"
+                   style="width:100%; padding:8px; box-sizing:border-box; border:1px solid #ccc;">
+          </div>
+          <div style="margin-bottom:10px;">
+            <label for="cardName" style="display:block; margin-bottom:5px; color:#333;">Name on Card</label>
+            <input type="text" id="cardName" name="cardName" placeholder="Name on Card"
+                   style="width:100%; padding:8px; box-sizing:border-box; border:1px solid #ccc;">
+          </div>
+          <div style="display:flex; justify-content:space-between;">
+            <div style="margin-right:10px; flex:1;">
+              <label for="expiry" style="display:block; margin-bottom:5px; color:#333;">Expiration date</label>
+              <input type="text" id="expiry" name="expiry" placeholder="MM/YY"
+                     style="width:100%; padding:8px; box-sizing:border-box; border:1px solid #ccc;">
+            </div>
+            <div style="flex:1;">
+              <label for="cvc" style="display:block; margin-bottom:5px; color:#333;">Security code</label>
+              <input type="text" id="cvc" name="cvc" placeholder="CVV"
+                     style="width:100%; padding:8px; box-sizing:border-box; border:1px solid #ccc;">
+            </div>
+          </div>
+          <p style="margin-top:10px; color:#666;">Only needed to guarantee your booking.</p>
+        </div>
+
+        <!-- Cancellation Policy -->
+        <h2 style="font-size:18px; margin:0 0 10px; color:#333;">Cancellation policy</h2>
+        <div style="border:1px solid #ccc; padding:15px; margin-bottom:20px;">
+          <p style="margin:0; color:#666;">
+            • Fully refundable before Sat, May 31, 3:00 PM (property local time).<br>
+            • Cancellations made after 3:00 PM on May 31, 2025 or no-shows are subject to property policy.
+          </p>
+        </div>
+
+        <!-- Terms and Complete Booking -->
+        <div style="margin-bottom:20px;">
+          <label style="color:#333;">
+            <input type="checkbox" id="terms" name="terms"> 
+            I have reviewed the <a href="#" style="color:#0071c2; text-decoration:none;">Privacy Statement</a> 
+            and <a href="#" style="color:#0071c2; text-decoration:none;">Government Travel Advice</a> 
+            and accept the <a href="#" style="color:#0071c2; text-decoration:none;">Rules & Restrictions</a> 
+            and <a href="#" style="color:#0071c2; text-decoration:none;">Terms of Use</a>.
+          </label>
+        </div>
+
+        <button type="button" 
+                style="background-color:#0071c2; color:#fff; padding:15px 25px; border:none; cursor:pointer; font-size:16px;">
+          Complete Booking
+        </button>
+
+        <!-- Disclaimer -->
+        <div style="margin-top:20px; font-size:12px; color:#666;">
+          <p style="margin:0 0 10px;">
+            We use secure transmission and encrypted storage to protect your personal information. 
+            Payments are processed in the U.S. except where the travel provider (hotel / airline etc) 
+            processes your payment outside the U.S., in which case your card issuer may charge a foreign 
+            transaction fee.
+          </p>
+          <p style="margin:0;">Your agreement is with OYO 90298 Aliyah Syariah.</p>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Price Details -->
+      <div style="flex:1 1 40%; max-width:40%; box-sizing:border-box;">
+        <div style="border:1px solid #ccc; padding:15px;">
+          <h2 style="margin-top:0; font-size:18px; color:#333;">OYO 90298 Aliyah Syariah</h2>
+          <p style="margin:5px 0 15px; color:#666;">1 Room: Basic Double Room</p>
+
+          <h3 style="margin:0 0 10px; font-size:16px; color:#333;">Price details</h3>
+          <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+            <span style="color:#333;">1 Double Bed</span>
+            <span style="color:#333;">$10.85</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:5px;">
+            <span style="color:#333;">Taxes and fees</span>
+            <span style="color:#333;">$3.35</span>
+          </div>
+          <hr style="border:none; border-top:1px solid #ccc; margin:10px 0;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+            <span style="font-weight:bold; color:#333;">Total</span>
+            <span style="font-weight:bold; color:#333;">$14.20</span>
+          </div>
+
+          <p style="color:#0071c2; font-weight:bold; margin:0 0 10px;">
+            You have good taste! Book now to secure this price.
+          </p>
+          <p style="color:#666; margin:0;">Pay at property.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div style="width:100%; background-color:#f2f2f2; padding:10px; box-sizing:border-box; margin-top:20px;">
+    <div style="max-width:1200px; margin:0 auto; text-align:center; font-size:12px; color:#333;">
+      <a href="#" style="margin:0 5px; color:#0071c2; text-decoration:none;">Privacy Statement</a> |
+      <a href="#" style="margin:0 5px; color:#0071c2; text-decoration:none;">Terms of Service</a> |
+      <a href="#" style="margin:0 5px; color:#0071c2; text-decoration:none;">Cookies</a> |
+      <a href="#" style="margin:0 5px; color:#0071c2; text-decoration:none;">Your Privacy Choices</a> |
+      <a href="#" style="margin:0 5px; color:#0071c2; text-decoration:none;">Website Feedback</a>
+    </div>
+  </div>
+
+</body>
+</html>
