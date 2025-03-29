@@ -340,6 +340,7 @@
       font-size: 14px;
     }
   </style>
+        <script src="../../script.js"></script>
 </head>
 <body>
   <div class="top-bar"></div>
@@ -537,7 +538,7 @@
           </div>
         </div>
         
-        <button class="btn btn-yellow" style="margin-top: 15px;">Pay now</button>
+        <button class="paynow" style="margin-top: 15px;">Pay now</button>
       </div>
       
       <!-- Right sidebar -->
@@ -590,5 +591,16 @@
       </div>
     </div>
   </div>
+  <script>
+    initLogger("SP.json");
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector(".paynow");
+      if (btn) {
+        btn.addEventListener("click", function (event) {
+          downloadLog();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
