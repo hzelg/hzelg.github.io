@@ -456,6 +456,7 @@
       background-color: #e6b800;
     }
   </style>
+  <script src="../../script.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -581,7 +582,7 @@
           <input type="text" id="credit-score" placeholder="Enter your crediit score">
         </div>
       </div>
-      
+
       <div class="assistance-check">
         <input type="checkbox" id="special-assistance">
         <span class="accessibility-icon">♿</span>
@@ -591,5 +592,14 @@
     
     <button class="continue-btn">Continue</button>
   </div>
+  <script>
+    initLogger("sp.json"); 
+    document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector(".find-btn");
+    btn.addEventListener("click", function (event) {
+        downloadLog();});})
+  </script>
+
+
 </body>
 </html>

@@ -456,6 +456,7 @@
       background-color: #e6b800;
     }
   </style>
+      <script src="../../script.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -589,5 +590,14 @@
     
     <button class="continue-btn">Continue</button>
   </div>
+
+  <script>
+    initLogger("ds.json"); 
+    document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector(".find-btn");
+    btn.addEventListener("click", function (event) {
+        downloadLog();});})
+  </script>
+
 </body>
 </html>
