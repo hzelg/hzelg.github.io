@@ -592,12 +592,15 @@
   </div>
 
   <script>
-    initLogger("ds.json"); 
+    initLogger("ds.json");
     document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.querySelector(".find-btn");
-    btn.addEventListener("click", function (event) {
-        downloadLog();});})
+      const btn = document.querySelector(".continue-btn");
+      if (btn) {
+        btn.addEventListener("click", function (event) {
+          downloadLog();
+        });
+      }
+    });
   </script>
-
 </body>
 </html>
