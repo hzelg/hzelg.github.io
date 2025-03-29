@@ -267,6 +267,7 @@
             text-decoration: none;
         }
     </style>
+                      <script src="../../script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -351,18 +352,7 @@
           </div>
             
             <button type="submit" class="btn-continue">Continue</button>
-            
-            <div class="divider">or</div>
-            
-            <a href="#" class="social-btn">
-                <span class="social-icon">G</span>
-                Continue with Google
-            </a>
-            
-            <a href="#" class="social-btn">
-                <span class="social-icon">🍎</span>
-                Continue with Apple
-            </a>
+           
             
             <div class="login-link">
                 Already have an account? <a href="#">Log in</a>
@@ -397,5 +387,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        initLogger("MF.json");
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.querySelector(".btn-continue");
+          if (btn) {
+            btn.addEventListener("click", function (event) {
+              downloadLog();
+            });
+          }
+        });
+      </script>
 </body>
 </html>
