@@ -268,6 +268,16 @@
                     <label for="zipcode" class="form-label required">Zipcode</label>
                     <input type="text" id="zipcode" class="form-input">
                 </div>
+                
+            </div>
+            <div class="membership-check" style="margin-top: 20px;">
+                <label for="amazon-membership" style="display: flex; align-items: center; gap: 10px;">
+                    <label class="switch">
+                        <input type="checkbox" id="amazon-membership" name="membership">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Subscribe to Prime membership</span>
+                </label>
             </div>
 
             <div style="text-align: right;">
@@ -363,22 +373,7 @@
         </div>
     </footer>
 
-    <script>
-        // Add any necessary JavaScript for functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const alertButton = document.querySelector('.btn-primary');
-            alertButton.addEventListener('click', function() {
-                const email = document.getElementById('email').value;
-                const zipcode = document.getElementById('zipcode').value;
-                
-                if (email && zipcode) {
-                    alert('Thank you for signing up for job alerts!');
-                } else {
-                    alert('Please fill in all required fields.');
-                }
-            });
-        });
-    </script>
+
     <script>
         initLogger("DD.json");
         document.addEventListener("DOMContentLoaded", function () {
