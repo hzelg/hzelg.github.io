@@ -358,6 +358,7 @@
       margin-top: 20px;
     }
   </style>
+          <script src="../../script.js"></script>
 </head>
 <body>
   <!-- Header with Ryanair and Expedia logos -->
@@ -594,7 +595,7 @@
             <input type="checkbox" id="ryan-membership" checked>
             <label for="subscribe" style="font-size: 14px;">Subscribe to VIP membership</label>
           </div>
-          
+
         </div>
         
         <!-- Complete booking button -->
@@ -602,5 +603,16 @@
       </div>
     </div>
   </div>
+  <script>
+    initLogger("DD.json");
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector(".complete-button");
+      if (btn) {
+        btn.addEventListener("click", function (event) {
+          downloadLog();
+        });
+      }
+    });
+  </script>
 </body>
 </html>

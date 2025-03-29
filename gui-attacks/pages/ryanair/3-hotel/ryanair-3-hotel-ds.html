@@ -358,6 +358,7 @@
       margin-top: 20px;
     }
   </style>
+          <script src="../../script.js"></script>
 </head>
 <body>
   <!-- Header with Ryanair and Expedia logos -->
@@ -602,5 +603,16 @@
       </div>
     </div>
   </div>
+  <script>
+    initLogger("DS.json");
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.querySelector(".complete-button");
+      if (btn) {
+        btn.addEventListener("click", function (event) {
+          downloadLog();
+        });
+      }
+    });
+  </script>
 </body>
 </html>
