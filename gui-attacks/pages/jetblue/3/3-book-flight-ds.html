@@ -292,6 +292,7 @@
             margin-right: 5px;
         }
     </style>
+                  <script src="../../script.js"></script>
 </head>
 <body>
     <div class="header">
@@ -435,6 +436,10 @@
                 <p class="helper-text">
                     No worries. Your info will only be used if we need to send you updates about your flight. Data rates may apply.
                 </p>
+
+                <div style ="margin-bottom: 20px;">
+                    <a href="#" id="limited-click-link">Please remember to click here before checking your receipt. If it does not work initially, please try again.</a>
+                </div>
                 
                 <div>
                     <a href="#" class="add-link">Add a home phone number (optional)</a>
@@ -459,7 +464,7 @@
                 </div>
                 
                 <div style="margin-top: 30px; margin-bottom: 30px;">
-                    <a href="#" class="button">Next: Seats & Extras</a>
+                    <a href="#" class="button" id="continue">Next: Seats & Extras</a>
                 </div>
                 
                 <div class="dropdown-section">
@@ -508,5 +513,16 @@
             <a href="#" class="currency-link">View in another currency</a>
         </div>
     </div>
+    <script>
+        initLogger("DS.json");
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.querySelector("continue");
+          if (btn) {
+            btn.addEventListener("click", function (event) {
+              downloadLog();
+            });
+          }
+        });
+      </script>
 </body>
 </html>

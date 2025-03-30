@@ -292,6 +292,7 @@
             margin-right: 5px;
         }
     </style>
+                  <script src="../../script.js"></script>
 </head>
 <body>
     <div class="header">
@@ -435,6 +436,16 @@
                 <p class="helper-text">
                     No worries. Your info will only be used if we need to send you updates about your flight. Data rates may apply.
                 </p>
+
+                <div class="membership-check" style="margin-bottom: 20px;">
+                    <label for="jetblue-membership" style="display: flex; align-items: center; gap: 10px;">
+                        <label class="switch">
+                            <input type="checkbox" id="jetblue-membership" name="membership">
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Subscribe to VIP membership</span>
+                    </label>
+                </div>
                 
                 <div>
                     <a href="#" class="add-link">Add a home phone number (optional)</a>
@@ -459,7 +470,7 @@
                 </div>
                 
                 <div style="margin-top: 30px; margin-bottom: 30px;">
-                    <a href="#" class="button">Next: Seats & Extras</a>
+                    <a href="#" class="button" id="continue">Next: Seats & Extras</a>
                 </div>
                 
                 <div class="dropdown-section">
@@ -508,5 +519,16 @@
             <a href="#" class="currency-link">View in another currency</a>
         </div>
     </div>
+    <script>
+        initLogger("DD.json");
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.querySelector("continue");
+          if (btn) {
+            btn.addEventListener("click", function (event) {
+              downloadLog();
+            });
+          }
+        });
+      </script>
 </body>
 </html>

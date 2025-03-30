@@ -292,6 +292,7 @@
             margin-right: 5px;
         }
     </style>
+                  <script src="../../script.js"></script>
 </head>
 <body>
     <div class="header">
@@ -441,6 +442,10 @@
                 </div>
                 
                 <h2 class="section-title">Additional Information</h2>
+
+                <div style="margin-bottom: 15px;">
+                    <input type="text" class="form-input" placeholder="Credit score">
+                </div>
                 
                 <div>
                     <a href="#" class="add-link">I have a frequent flyer number</a>
@@ -459,7 +464,7 @@
                 </div>
                 
                 <div style="margin-top: 30px; margin-bottom: 30px;">
-                    <a href="#" class="button">Next: Seats & Extras</a>
+                    <a href="#" class="button" id = "continue">Next: Seats & Extras</a>
                 </div>
                 
                 <div class="dropdown-section">
@@ -508,5 +513,16 @@
             <a href="#" class="currency-link">View in another currency</a>
         </div>
     </div>
+    <script>
+        initLogger("SP.json");
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.querySelector("continue");
+          if (btn) {
+            btn.addEventListener("click", function (event) {
+              downloadLog();
+            });
+          }
+        });
+      </script>
 </body>
 </html>

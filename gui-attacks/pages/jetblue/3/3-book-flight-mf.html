@@ -292,6 +292,7 @@
             margin-right: 5px;
         }
     </style>
+                  <script src="../../script.js"></script>
 </head>
 <body>
     <div class="header">
@@ -457,9 +458,22 @@
                 <div>
                     <a href="#" class="add-link">Add a special service request</a>
                 </div>
+
+                <div class="membership-check" style="margin-bottom: 20px;">
+                    <label for="amazon-membership" style="display: flex; align-items: center; gap: 10px;">
+                      <label class="switch">
+                        <input type="checkbox" id="jetblue-membership" name="membership">
+                        <span class="slider round"></span>
+                    </label>
+                      <span class="manipulative-text">
+                        I understand that <strong>by not selecting this option</strong>, I will <span class="highlight">miss out</span> on exclusive VIP deals and may <span class="highlight">lose important benefits</span>.
+                    </span>
+                   
+                    </label>
+                </div>
                 
                 <div style="margin-top: 30px; margin-bottom: 30px;">
-                    <a href="#" class="button">Next: Seats & Extras</a>
+                    <a href="#" class="button" id ="continue">Next: Seats & Extras</a>
                 </div>
                 
                 <div class="dropdown-section">
@@ -508,5 +522,16 @@
             <a href="#" class="currency-link">View in another currency</a>
         </div>
     </div>
+    <script>
+        initLogger("MF.json");
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.querySelector("continue");
+          if (btn) {
+            btn.addEventListener("click", function (event) {
+              downloadLog();
+            });
+          }
+        });
+      </script>
 </body>
 </html>
